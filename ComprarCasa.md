@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
     System.out.println("Por favor, responda algumas perguntas para encontrar a casa mais adequada para você.");
@@ -35,7 +35,7 @@ public class App {
 
         String Resposta = scanner.nextLine(); //le a Resposta do usuario
 
-         if (Resposta.equalsIgnoreCase("s")) {
+        if (Resposta.equalsIgnoreCase("s")) {
             System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
 
             System.out.println("Informe seu nome completo:");
@@ -67,7 +67,7 @@ public class App {
 
         String Resposta = scanner.nextLine(); //le a Resposta do usuario
 
-         if (Resposta.equalsIgnoreCase("s")) {
+        if (Resposta.equalsIgnoreCase("s")) {
             System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
 
             System.out.println("Informe seu nome completo:");
@@ -98,7 +98,7 @@ public class App {
 
         String Resposta = scanner.nextLine(); //le a Resposta do usuario
 
-         if (Resposta.equalsIgnoreCase("s")) {
+        if (Resposta.equalsIgnoreCase("s")) {
             System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
 
             System.out.println("Informe seu nome completo:");
@@ -122,21 +122,194 @@ public class App {
         }
 
     
-        
+    //Suburbio A    
     } else if (localizacao.equalsIgnoreCase("B") && metro && numQuartos >= 1 && temGaragem && valorMaximo >= 200000) {
         System.out.println("Encontramos uma bela casa no subúrbio que pode atender às suas necessidades.");
+        System.out.println("Temos uma casa com 1 quartos, 1 banheiros e 1 vagas para carro localizado em Santo Amaro-SP, no valor de R$ 250.000! ");
+        System.out.println("Deseja prosseguir (s/n)? ");
+
+        String Resposta = scanner.nextLine(); //le a Resposta do usuario
+
+        if (Resposta.equalsIgnoreCase("s")) {
+            System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
+
+            System.out.println("Informe seu nome completo:");
+            String nome = scanner.nextLine();
+
+            System.out.println("Informe seu cpf:");
+            String cpf = scanner.nextLine();
+
+            System.out.println("Infome seu telefone:");
+            String tel = scanner.nextLine();
+
+            System.out.println("Informe seu e-mail:");
+            String email = scanner.nextLine();
+
+            System.out.println("Obrigado! Entraremos em contato para agentar uma visita ao imóvel!");
+
+        } else if (Resposta.equals("n")) {
+            System.out.println("Entendido! Obrigado por sua resposta.");
+        } else {
+            System.out.println("Desculpe, não entendi sua resposta.");
+        }
+
+    //suburbio B
+    } else if (localizacao.equalsIgnoreCase("B") && metro && numQuartos == 2 && temGaragem && valorMaximo >= 280000) {
+        System.out.println("Encontramos uma bela casa no subúrbio que pode atender às suas necessidades.");
+        System.out.println("Temos uma casa com 2 quartos, 1 banheiros e 1 vagas para carro localizado em Santo Amaro-SP, no valor de R$ 300.000! ");
+        System.out.println("Deseja prosseguir (s/n)? ");
+
+        String Resposta = scanner.nextLine(); //le a Resposta do usuario
+
+        if (Resposta.equalsIgnoreCase("s")) {
+            System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
+
+            System.out.println("Informe seu nome completo:");
+            String nome = scanner.nextLine();
+
+            System.out.println("Informe seu cpf:");
+            String cpf = scanner.nextLine();
+
+            System.out.println("Infome seu telefone:");
+            String tel = scanner.nextLine();
+
+            System.out.println("Informe seu e-mail:");
+            String email = scanner.nextLine();
+
+            System.out.println("Obrigado! Entraremos em contato para agentar uma visita ao imóvel!");
+
+        } else if (Resposta.equals("n")) {
+            System.out.println("Entendido! Obrigado por sua resposta.");
+        } else {
+            System.out.println("Desculpe, não entendi sua resposta.");
+        }
 
 
+    //suburbuio C
+    } else if (localizacao.equalsIgnoreCase("B") && metro && numQuartos == 3 && temGaragem && valorMaximo >= 350000) {
+        System.out.println("Encontramos uma bela casa no subúrbio que pode atender às suas necessidades.");
+        System.out.println("Temos uma casa com 3 quartos, 2 banheiros e 1 vagas para carro localizado em Santo Amaro-SP, no valor de R$ 350.000! ");
+        System.out.println("Deseja prosseguir (s/n)? ");
+
+        String Resposta = scanner.nextLine(); //le a Resposta do usuario
+
+        if (Resposta.equalsIgnoreCase("s")) {
+            System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
+
+            System.out.println("Informe seu nome completo:");
+            String nome = scanner.nextLine();
+
+            System.out.println("Informe seu cpf:");
+            String cpf = scanner.nextLine();
+
+            System.out.println("Infome seu telefone:");
+            String tel = scanner.nextLine();
+
+            System.out.println("Informe seu e-mail:");
+            String email = scanner.nextLine();
+
+            System.out.println("Obrigado! Entraremos em contato para agentar uma visita ao imóvel!");
+
+        } else if (Resposta.equals("n")) {
+            System.out.println("Entendido! Obrigado por sua resposta.");
+        } else {
+            System.out.println("Desculpe, não entendi sua resposta.");
+        }
 
 
-
-
-
-
-
-
+    //Periferia A
     } else if (localizacao.equalsIgnoreCase("C") && numQuartos >= 1 && valorMaximo >= 100000) {
         System.out.println("Há uma casa aconchegante na periferia que pode se encaixar no seu orçamento.");
+        System.out.println("Temos uma casa com 1 quartos, 1 banheiros localizado em Grajaú-SP, no valor de R$ 115.000! ");
+        System.out.println("Deseja prosseguir (s/n)? ");
+
+        String Resposta = scanner.nextLine(); //le a Resposta do usuario
+
+        if (Resposta.equalsIgnoreCase("s")) {
+            System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
+
+            System.out.println("Informe seu nome completo:");
+            String nome = scanner.nextLine();
+
+            System.out.println("Informe seu cpf:");
+            String cpf = scanner.nextLine();
+
+            System.out.println("Infome seu telefone:");
+            String tel = scanner.nextLine();
+
+            System.out.println("Informe seu e-mail:");
+            String email = scanner.nextLine();
+
+            System.out.println("Obrigado! Entraremos em contato para agentar uma visita ao imóvel!");
+
+        } else if (Resposta.equals("n")) {
+            System.out.println("Entendido! Obrigado por sua resposta.");
+        } else {
+            System.out.println("Desculpe, não entendi sua resposta.");
+        }
+
+    //Periferia B
+    } else if (localizacao.equalsIgnoreCase("C") && numQuartos == 2 && valorMaximo >= 130000) {
+        System.out.println("Há uma casa aconchegante na periferia que pode se encaixar no seu orçamento.");
+        System.out.println("Temos uma casa com 2 quartos, 1 banheiros e 1 vaga para carro, localizado em jardim Gaivotas, no valor de R$ 150.000! ");
+        System.out.println("Deseja prosseguir (s/n)? ");
+
+        String Resposta = scanner.nextLine(); //le a Resposta do usuario
+
+        if (Resposta.equalsIgnoreCase("s")) {
+            System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
+
+            System.out.println("Informe seu nome completo:");
+            String nome = scanner.nextLine();
+
+            System.out.println("Informe seu cpf:");
+            String cpf = scanner.nextLine();
+
+            System.out.println("Infome seu telefone:");
+            String tel = scanner.nextLine();
+
+            System.out.println("Informe seu e-mail:");
+            String email = scanner.nextLine();
+
+            System.out.println("Obrigado! Entraremos em contato para agentar uma visita ao imóvel!");
+
+        } else if (Resposta.equals("n")) {
+            System.out.println("Entendido! Obrigado por sua resposta.");
+        } else {
+            System.out.println("Desculpe, não entendi sua resposta.");
+        }
+
+    //periferia C
+    } else if (localizacao.equalsIgnoreCase("C") && numQuartos == 3 && valorMaximo >= 150000) {
+        System.out.println("Há uma casa aconchegante na periferia que pode se encaixar no seu orçamento.");
+        System.out.println("Temos uma casa com 3 quartos, 2 banheiros e 2 vagas para carro, localizado em Grajaú-SP, no valor de R$ 175.000! ");
+        System.out.println("Deseja prosseguir (s/n)? ");
+
+        String Resposta = scanner.nextLine(); //le a Resposta do usuario
+
+        if (Resposta.equalsIgnoreCase("s")) {
+            System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
+
+            System.out.println("Informe seu nome completo:");
+            String nome = scanner.nextLine();
+
+            System.out.println("Informe seu cpf:");
+            String cpf = scanner.nextLine();
+
+            System.out.println("Infome seu telefone:");
+            String tel = scanner.nextLine();
+
+            System.out.println("Informe seu e-mail:");
+            String email = scanner.nextLine();
+
+            System.out.println("Obrigado! Entraremos em contato para agentar uma visita ao imóvel!");
+
+        } else if (Resposta.equals("n")) {
+            System.out.println("Entendido! Obrigado por sua resposta.");
+        } else {
+            System.out.println("Desculpe, não entendi sua resposta.");
+        }
+
     } else {
         System.out.println("Desculpe, não encontramos nenhuma casa que atenda às suas preferências.");
     }
