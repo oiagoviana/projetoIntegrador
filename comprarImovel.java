@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class buscarImovel {
+public class comprarImovel {
     public static void main(String[] args) {
 
-        listarCasa();
+        comprarCasa();
 
     }
 
-    public static void listarCasa() {
+    public static void comprarCasa() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Por favor, responda algumas perguntas para encontrar a casa mais adequada para você.");
 
