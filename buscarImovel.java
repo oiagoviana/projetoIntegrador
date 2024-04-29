@@ -3,14 +3,9 @@ import java.util.Scanner;
 public class buscarImovel {
     public static void main(String[] args) {
 
-
-
         listarCasa();
 
-        
     }
-
-
 
     public static void listarCasa() {
         Scanner scanner = new Scanner(System.in);
@@ -334,9 +329,6 @@ public class buscarImovel {
         } else {
             System.out.println("Desculpe, não encontramos nenhuma casa que atenda às suas preferências.");
         }
-        scanner.close();
-    
-
-}
+    }
 
 }
