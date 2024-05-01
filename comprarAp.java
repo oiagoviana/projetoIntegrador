@@ -41,9 +41,6 @@ public class comprarImovel {
                     System.out.print("Informe seu nome completo:");
                     String nome = scanner.nextLine();
 
-                    System.out.print("Informe seu cpf:");
-                    String cpf = scanner.nextLine();
-
                     System.out.print("Infome seu telefone:");
                     String tel = scanner.nextLine();
 
@@ -79,9 +76,6 @@ public class comprarImovel {
 
                     System.out.print("Informe seu nome completo:");
                     String nome = scanner.nextLine();
-
-                    System.out.print("Informe seu cpf:");
-                    String cpf = scanner.nextLine();
 
                     System.out.print("Infome seu telefone:");
                     String tel = scanner.nextLine();
@@ -119,9 +113,6 @@ public class comprarImovel {
                     System.out.print("Informe seu nome completo:");
                     String nome = scanner.nextLine();
 
-                    System.out.print("Informe seu cpf:");
-                    String cpf = scanner.nextLine();
-
                     System.out.print("Infome seu telefone:");
                     String tel = scanner.nextLine();
 
@@ -156,9 +147,6 @@ public class comprarImovel {
 
                     System.out.print("Informe seu nome completo:");
                     String nome = scanner.nextLine();
-
-                    System.out.print("Informe seu cpf:");
-                    String cpf = scanner.nextLine();
 
                     System.out.print("Infome seu telefone:");
                     String tel = scanner.nextLine();
@@ -196,9 +184,6 @@ public class comprarImovel {
                     System.out.print("Informe seu nome completo:");
                     String nome = scanner.nextLine();
 
-                    System.out.print("Informe seu cpf:");
-                    String cpf = scanner.nextLine();
-
                     System.out.print("Infome seu telefone:");
                     String tel = scanner.nextLine();
 
@@ -233,9 +218,6 @@ public class comprarImovel {
 
                     System.out.print("Informe seu nome completo:");
                     String nome = scanner.nextLine();
-
-                    System.out.print("Informe seu cpf:");
-                    String cpf = scanner.nextLine();
 
                     System.out.print("Infome seu telefone:");
                     String tel = scanner.nextLine();
