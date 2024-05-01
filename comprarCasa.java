@@ -18,9 +18,8 @@ public class comprarImovel {
 
         System.out.println("Quantos quartos você precisa: ");
         int numQuartos = scanner.nextInt();
-        scanner.nextLine(); // Consumir a quebra de linha pendente
-
-        // Verificando as preferências do comprador
+        scanner.nextLine();
+        
         // Centro casa 1 quarto
         if (localizacao.equalsIgnoreCase("1") && numQuartos == 1) {
             System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
@@ -57,6 +56,7 @@ public class comprarImovel {
                 default:
                     break;
             }
+            
             // Centro casa 2 quartos
         } else if (localizacao.equalsIgnoreCase("1") && numQuartos == 2) {
             System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
@@ -93,7 +93,8 @@ public class comprarImovel {
                 default:
                     break;
             }
-
+            
+        //centro casa 3 quartos
         } else if (localizacao.equalsIgnoreCase("1") && numQuartos == 3) {
             System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
             System.out.println("1. Uma casa proxima ao metrô, 3 quartos, 4 banheiros, 3 vagas para carro, localizada em Rua Ribeiro do Vale, Santa Cecília - SP | R$ 1.000.000 (IPTU 12xR$ 1.416)");
@@ -132,6 +133,8 @@ public class comprarImovel {
                 default:
                     break;
             }
+            
+            //industrial casa 1 quarto
         } else if (localizacao.equalsIgnoreCase("2") && numQuartos == 1) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona industrial da cidade.");
             System.out.println("1. Uma casa com 1 quarto, 1 banheiros, sem vaga para carros, localizada em Rua Central de Minas, Vila Leopoldina - SP | R$ 550.000 (IPTU 12xR$ 158)");
@@ -167,7 +170,8 @@ public class comprarImovel {
                 default:
                     break;
             }
-
+            
+          //industrial casa 2 quartos
         } else if (localizacao.equalsIgnoreCase("2") && numQuartos == 2) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona industrial da cidade.");
             System.out.println("1. Uma casa com 2 quartos, 2 banheiros, 3 vagas para carros, localizada em Rua Marcelo Homem de Melo, Mooca - SP | R$ 800.000 (IPTU 12xR$ 398)");
@@ -203,6 +207,8 @@ public class comprarImovel {
                 default:
                     break;
             }
+
+            //industrial casa 3 quartos
         } else if (localizacao.equalsIgnoreCase("2") && numQuartos == 3) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona industrial da cidade.");
             System.out.println("1. Uma casa com 3 quartos, 4 banheiros, 2 vagas para carros, localizada em Rua Majubim, Lapa - SP | R$ 1.000.000 (IPTU 12xR$ 495)");
@@ -238,6 +244,8 @@ public class comprarImovel {
                 default:
                     break;
             }
+
+            //periferia casa 1
         } else if (localizacao.equalsIgnoreCase("3") && numQuartos == 1) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona periférica da cidade.");
             System.out.println("1. Uma casa proxima ao metrô com 1 quarto, 1 banheiros, 3 vagas para carros, localizada em Travessa Presidente Roberto Orti, Grajaú - SP | R$ 250.000 (IPTU 12xR$ 93)");
@@ -273,6 +281,8 @@ public class comprarImovel {
                 default:
                     break;
             }
+
+            //periferia casa 2 
         } else if (localizacao.equalsIgnoreCase("3") && numQuartos == 2) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona periférica da cidade.");
             System.out.println("1. Uma casa com 2 quartos, 2 banheiros, 3 vagas para carros, localizada em Rua Luis Mauro, Tiradentes - SP | R$ 175.000 (IPTU 12xR$ 72)");
@@ -308,6 +318,8 @@ public class comprarImovel {
                 default:
                     break;
             }
+
+            //periferia casa 3 
         } else if (localizacao.equalsIgnoreCase("3") && numQuartos == 3) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona periférica da cidade.");
             System.out.println("1. Uma casa com 3 quartos, 2 banheiros, 1 vagas para carros, localizada em Rua Miguel Lopes, Capão Redondo - SP | R$ 267.000 (IPTU 12xR$ 112)");
