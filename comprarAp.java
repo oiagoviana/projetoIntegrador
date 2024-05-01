@@ -18,10 +18,9 @@ public class comprarImovel {
 
         System.out.println("Quantos quartos você precisa: ");
         int numQuartos = scanner.nextInt();
-        scanner.nextLine(); // Consumir a quebra de linha pendente
-
-        // Verificando as preferências do comprador
-        // Centro casa 1 quarto
+        scanner.nextLine();
+        
+        // Centro ap 1
         if (localizacao.equalsIgnoreCase("1") && numQuartos == 1) {
             System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
             System.out.println("1. Um apartamento proximo ao metrô com 1 quarto, 1 banheiro, sem garagem, localizado em Rua Rua Brigadeiro Tobias, Cambuci - SP | R$ 200.000 (IPTU 12xR$ 41)");
@@ -57,7 +56,8 @@ public class comprarImovel {
                 default:
                     break;
             }
-            // Centro casa 2 quartos
+            
+            // Centro ap 2
         } else if (localizacao.equalsIgnoreCase("1") && numQuartos == 2) {
             System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
             System.out.println("1. Um apartamento próximo ao metrô, 2 quartos, 2 banheiros, sem vagas para carro, localizado em Praça Pedro Lessa, Bom Retiro - SP | R$ 485.000 (IPTU 12xR$ 148)");
@@ -93,7 +93,8 @@ public class comprarImovel {
                 default:
                     break;
             }
-
+            
+           //centro ap 3
         } else if (localizacao.equalsIgnoreCase("1") && numQuartos == 3) {
             System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
             System.out.println("1. Um apartamento proximo ao metrô, 3 quartos, 1 banheiros, sem vagas para carro, localizada em Rua Fernão Sales, Sé - SP | R$ 380.000 (IPTU 12xR$ 0)");
@@ -129,6 +130,8 @@ public class comprarImovel {
                 default:
                     break;
             }
+
+            //industrial ap 1
         } else if (localizacao.equalsIgnoreCase("2") && numQuartos == 1) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona industrial da cidade.");
             System.out.println("1. Um apartamento com 1 quarto, 1 banheiros, sem vaga para carros, localizada em Avenida Imperatriz Leopoldina, Vila Leopoldina - SP | R$ 240.000 (IPTU 12xR$ 0)");
@@ -164,7 +167,8 @@ public class comprarImovel {
                 default:
                     break;
             }
-
+            
+        //industrial ap 2
         } else if (localizacao.equalsIgnoreCase("2") && numQuartos == 2) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona industrial da cidade.");
             System.out.println("1. Um apartamento com 2 quartos, 1 banheiros, 3 vagas para carros, localizada em Rua Rua dos Campineiros, Mooca - SP | R$ 390.000 (IPTU 12xR$ 0)");
@@ -200,6 +204,8 @@ public class comprarImovel {
                 default:
                     break;
             }
+
+            //industrial ap 3 
         } else if (localizacao.equalsIgnoreCase("2") && numQuartos == 3) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona industrial da cidade.");
             System.out.println("1. Um apartamento com 3 quartos, 1 banheiros, 1 vagas para carros, localizada em Rua Marcilio Dias, Lapa - SP | R$ 460.000 (IPTU 12xR$ 33)");
