@@ -24,7 +24,7 @@ public class Imobiliaria {
             } else if (escolha.equalsIgnoreCase("b")) {
             	System.out.println("1 - Comprar Apartamento");
              	System.out.println("2 - Comprar Casa");
-             	System.out.println("1 - Comprar Terreno");
+             	System.out.println("3 - Comprar Terreno");
             	var subEscolha = LerDados.lerTexto();
                 if(subEscolha.equalsIgnoreCase("1")){
                     comprarAp.comprarAp();
