@@ -15,15 +15,29 @@ public class Imobiliaria {
             System.out.println();
             System.out.print("Digite a sua escolha: ");
             var escolha = LerDados.lerTexto();
+            
             System.out.println();
 
             if (escolha.equalsIgnoreCase("a")) {
                 cadastrarImovel.cadastrarImovel();
+                
             } else if (escolha.equalsIgnoreCase("b")) {
-                comprarImovel.comprarCasa();
+            	System.out.println("1 - Comprar Apartamento");
+             	System.out.println("2 - Comprar Casa");
+             	System.out.println("1 - Comprar Terreno");
+            	var subEscolha = LerDados.lerTexto();
+                if(subEscolha.equalsIgnoreCase("1")){
+                    comprarAp.comprarAp();
+                } else if(subEscolha.equalsIgnoreCase("2")){
+                    comprarCasa.comprarCasa();
+                } else if(subEscolha.equalsIgnoreCase("3")){
+                    comprarTerreno.comprarTerreno();
+                }
+                
+               
             } else if(escolha.equalsIgnoreCase("c")){
                 alugarImovel.alugarImovel();
-            } else if (escolha.equals("X")) {
+            } else if (escolha.equalsIgnoreCase("X")) {
                 return;
             } else {
                 System.out.println("Esta não é uma opção válida. Vamos tentar novamente!");
