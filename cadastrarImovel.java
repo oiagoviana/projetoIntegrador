@@ -139,6 +139,5 @@ public class cadastrarImovel {
       
       System.out.println("Cadastro realizado!");
     }
-    scanner.close();
   }
 }
