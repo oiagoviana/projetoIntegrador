@@ -34,7 +34,6 @@ public class Imobiliaria {
                     comprarTerreno.comprarTerreno();
                 }
                 
-               
             } else if(escolha.equalsIgnoreCase("c")){
                 alugarImovel.alugarImovel();
             } else if (escolha.equalsIgnoreCase("X")) {
