@@ -5,6 +5,6 @@ public class alugarImovel {
     }
 
     public static void alugarImovel(){
-
+    	
     }
 }
