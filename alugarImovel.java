@@ -18,10 +18,6 @@ import java.util.Optional;
 	        LocalDateTime hora,
 	        BigDecimal preco
 	) {
-    
-    public static void main(String[] args) {
-        alugarImovel();
-    }
 
     public static void alugarImovel(){
     	
