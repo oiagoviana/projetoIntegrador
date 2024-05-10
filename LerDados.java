@@ -33,7 +33,7 @@ public class LerDados {
             } catch (NumberFormatException erro) {
                 // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -46,9 +46,9 @@ public class LerDados {
                     return resultado;
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -59,9 +59,9 @@ public class LerDados {
             try {
                 return OptionalInt.of(Integer.parseInt(linha));
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -75,9 +75,9 @@ public class LerDados {
                     return OptionalInt.of(resultado);
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -87,9 +87,9 @@ public class LerDados {
             try {
                 return Double.parseDouble(linha);
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -102,9 +102,9 @@ public class LerDados {
                     return resultado;
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -115,9 +115,9 @@ public class LerDados {
             try {
                 return OptionalDouble.of(Double.parseDouble(linha));
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -131,9 +131,9 @@ public class LerDados {
                     return OptionalDouble.of(resultado);
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -146,9 +146,9 @@ public class LerDados {
                     return resultado.setScale(casasDecimais);
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -161,9 +161,9 @@ public class LerDados {
                     return resultado.setScale(casasDecimais);
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -177,9 +177,9 @@ public class LerDados {
                     return Optional.of(resultado.setScale(casasDecimais));
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -193,9 +193,9 @@ public class LerDados {
                     return Optional.of(resultado.setScale(casasDecimais));
                 }
             } catch (NumberFormatException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -205,9 +205,9 @@ public class LerDados {
             try {
                 return LocalDate.parse(linha, DATA);
             } catch (DateTimeParseException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -218,9 +218,9 @@ public class LerDados {
             try {
                 return Optional.of(LocalDate.parse(linha, DATA));
             } catch (DateTimeParseException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -230,9 +230,9 @@ public class LerDados {
             try {
                 return LocalDateTime.parse(linha, DATA_HORA);
             } catch (DateTimeParseException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -243,9 +243,9 @@ public class LerDados {
             try {
                 return Optional.of(LocalDateTime.parse(linha, DATA_HORA));
             } catch (DateTimeParseException erro) {
-                // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                // Ignora o erro, segue com o System.out.printlnln mais abaixo e com o while true em seguida.
             }
-            System.out.print(tenteNovamente);
+            System.out.println(tenteNovamente);
         }
     }
 
@@ -261,4 +261,26 @@ public class LerDados {
     public static String lerTexto() {
         return scan.nextLine();
     }
-}
+
+    public static String lerTexto2(String tenteNovamente) {
+        String dados = scan.nextLine();
+            
+        while(dados.trim().isEmpty()){
+    
+                System.out.println(tenteNovamente);
+                dados = scan.nextLine();
+            }
+            return dados;
+            
+           /* while (true) {
+                var linha = scan.nextLine();
+                try {
+                    return Double.parseDouble(linha);
+                } catch (NumberFormatException erro) {
+                    // Ignora o erro, segue com o System.out.println mais abaixo e com o while true em seguida.
+                }
+                System.out.print(tenteNovamente);
+            }*/
+            //return scan.nextLine();
+        }
+    }
