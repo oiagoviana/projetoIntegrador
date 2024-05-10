@@ -40,7 +40,7 @@ public class cadastrarImovel {
     System.out.println("1. Casa");
     System.out.println("2. Apartamento");
     System.out.println("3. Terreno");
-    System.out.print("Escolha uma opção: ");
+    System.out.println("Escolha uma opção: ");
     String escolha = LerDados.lerTexto();
     String endereco;
     double preco;
@@ -49,20 +49,20 @@ public class cadastrarImovel {
     
     if (escolha.equals("1")) {
     	tipo = "Casa";
-    	System.out.print("Endereço da casa: ");
-    	endereco = LerDados.lerTexto();
+    	System.out.println("Endereço da casa: ");
+    	endereco = LerDados.lerTexto2("Digite o endereço da casa!");
       
-    	System.out.print("Preço da casa: R$");
+    	System.out.println("Preço da casa: R$");
     	preco = LerDados.lerDouble("Digite o preço da casa!");
 
-    	System.out.print("Número de quartos: ");
+    	System.out.println("Número de quartos: ");
     	int quartos = LerDados.lerInt("Digite a quantidade quartos da casa!");
 
-    	System.out.print("A casa tem garagem? (s/n): ");
+    	System.out.println("A casa tem garagem? (s/n): ");
     	String temGaragemStr = LerDados.lerTexto();
     	boolean temGaragem = temGaragemStr.equalsIgnoreCase("sim");
        
-    	System.out.print("Para alugar? Caso responda não será realizado a venda.(s/n): ");
+    	System.out.println           ("Para alugar? Caso responda não será realizado a venda.(s/n): ");
     	String paraAlugarStr = LerDados.lerTexto();
     	paraAlugar = paraAlugarStr.equalsIgnoreCase("s");
       
@@ -73,19 +73,19 @@ public class cadastrarImovel {
     	} else if (escolha.equals("2")) {
     	tipo = "Apartamento";
       
-    	System.out.print("Endereço do apartamento: ");
-    	endereco = LerDados.lerTexto();
+    	System.out.println("Endereço do apartamento: ");
+    	endereco = LerDados.lerTexto2("Digite o endereço do apartamento!");
       
-    	System.out.print("Preço do apartamento: R$");
+    	System.out.println("Preço do apartamento: R$");
     	preco = LerDados.lerDouble("Digite o preço do apartamento!");
       
-    	System.out.print("Andar do apartamento: ");
+    	System.out.println("Andar do apartamento: ");
     	int andar = LerDados.lerInt("Digite o andar do apartamento!");
 
-    	System.out.print("A casa tem garagem? (s/n): ");
+    	System.out.println("A casa tem garagem? (s/n): ");
     	String temGaragemStr = LerDados.lerTexto();
 
-    	System.out.print("Para alugar? ");
+    	System.out.println("Para alugar? ");
     	String paraAlugarStr = LerDados.lerTexto();
     	paraAlugar = paraAlugarStr.equalsIgnoreCase("sim");
       
@@ -95,10 +95,10 @@ public class cadastrarImovel {
     } else if (escolha.equals("3")) {
     	tipo = "Terreno";
       
-      	System.out.print("Endereço do terreno: ");
-      	endereco = LerDados.lerTexto();
+      	System.out.println("Endereço do terreno: ");
+      	endereco = LerDados.lerTexto2("Digite o endereço do terreno!");
       
-      	System.out.print("Preço do terreno: R$");
+      	System.out.println("Preço do terreno: R$");
       	preco = LerDados.lerDouble("Digite o preço do terreno!");
       	paraAlugar = false;
       
@@ -112,21 +112,22 @@ public class cadastrarImovel {
     	System.out.println("\nInforme os seus dados para continuar.");
 
     	System.out.println("Nome: ");
-    	String nome = LerDados.lerTexto();
+    	String nome = LerDados.lerTexto2("Digite o seu nome!");
     	nome = nome.replaceAll("[^a-zA-Z]", "");
     
     	System.out.println("CPF: ");
-    	String cpf = LerDados.lerTexto();
+    	String cpf = LerDados.lerTexto2("Digite o seu CPF!");
     	cpf = cpf.replaceAll("[^0-9]", ""); // Remover caracteres não numéricos
+
     	String cpf2 = cpf.replaceAll("(\\d{3})(\\d{3})(\\d{3})(\\d{2})", "$1.$2.$3-$4");
       
     	System.out.println("Telefone: ");
-    	String telefone = LerDados.lerTexto();
+    	String telefone = LerDados.lerTexto2("Digite o seu telefone!");
     	telefone = telefone.replaceAll("[^0-9]", "");
     	String telefone2 = telefone.replaceAll("(\\d{2})(\\d{5})(\\d{4})", "($1)$2-$3");
 
     	System.out.println("E-mail: ");
-    	String email = LerDados.lerTexto();
+    	String email = LerDados.lerTexto2("Digite o seu e-mail!");
       
     	System.out.println("Cadastro realizado!");
     	}
