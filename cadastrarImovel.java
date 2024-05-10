@@ -13,7 +13,8 @@ public class cadastrarImovel {
       double preco;
       String tipo;
       boolean paraAlugar;
-      
+
+	  
       public Propriedade(String endereco, double preco, String tipo, boolean paraAlugar) {
         this.endereco = endereco;
         this.preco = preco;
@@ -59,11 +60,11 @@ public class cadastrarImovel {
     	int quartos = LerDados.lerInt("Digite a quantidade quartos da casa!");
 
     	System.out.println("A casa tem garagem? (s/n): ");
-    	String temGaragemStr = LerDados.lerTexto();
+    	String temGaragemStr = LerDados.lerTexto2("Digite a sua resposta!1");
     	boolean temGaragem = temGaragemStr.equalsIgnoreCase("sim");
        
     	System.out.println           ("Para alugar? Caso responda não será realizado a venda.(s/n): ");
-    	String paraAlugarStr = LerDados.lerTexto();
+    	String paraAlugarStr = LerDados.lerTexto2("Digite a sua resposta!");
     	paraAlugar = paraAlugarStr.equalsIgnoreCase("s");
       
       
@@ -83,10 +84,10 @@ public class cadastrarImovel {
     	int andar = LerDados.lerInt("Digite o andar do apartamento!");
 
     	System.out.println("A casa tem garagem? (s/n): ");
-    	String temGaragemStr = LerDados.lerTexto();
+    	String temGaragemStr = LerDados.lerTexto2("Digite a sua resposta!");
 
-    	System.out.println("Para alugar? ");
-    	String paraAlugarStr = LerDados.lerTexto();
+    	System.out.println("Para alugar? Caso responda não será realizado a venda.(s/n) ");
+    	String paraAlugarStr = LerDados.lerTexto2("Digite a sua resposta!");
     	paraAlugar = paraAlugarStr.equalsIgnoreCase("sim");
       
     	Propriedade apartamento = new Propriedade(endereco, preco, tipo, paraAlugar);
@@ -128,8 +129,11 @@ public class cadastrarImovel {
 
     	System.out.println("E-mail: ");
     	String email = LerDados.lerTexto2("Digite o seu e-mail!");
-      
+
+		
     	System.out.println("Cadastro realizado!");
     	}
+
+		
   	}
  }
