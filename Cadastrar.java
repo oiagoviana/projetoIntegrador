@@ -20,7 +20,12 @@ public class Cadastrar {
                             partes[0], // Endereço
                             Double.parseDouble(partes[1]), // Preço
                             partes[2], // Tipo
-                            Integer.parseInt(partes[3]) // para Alugar
+                            partes[3].equals("true"),// para Alugar
+                           partes [4],  // nome
+                           partes [5], //email
+                           partes[6] //telefone
+                         
+                            
                     );
                     imoveis.add(propriedade);
                 }
@@ -34,7 +39,7 @@ public class Cadastrar {
     public static void salvarTudo(List<Propriedade> imoveis) {
         List<String> linhas = imoveis.stream()
                 .map(imovel -> imovel.endereco + "," + imovel.preco + "," + imovel.tipo + "," +
-                        imovel.paraAlugar)
+                        imovel.paraAlugar + "," + imovel.nome + "," + imovel.email + "," + imovel.telefone)
                 .collect(Collectors.toList());
         try {
             Files.write(Path.of(NOME_ARQUIVO), linhas);
@@ -50,15 +55,6 @@ public class Cadastrar {
         salvarTudo(imoveis);
     }
 
-    /*public static void salvar(Propriedade imovel) {
-        List<Propriedade> imoveis = lerTudo();
-        imoveis.removeIf(v -> v.endereco.equalsIgnoreCase(imovel.endereco));
-        imoveis.add(imovel);
-        salvarTudo(imoveis);
-        
-        // Mensagem de confirmação
-        System.out.println("As informações foram salvas com sucesso!");
-    }*/
 
     
 }
