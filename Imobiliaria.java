@@ -35,7 +35,7 @@ public class Imobiliaria {
                 }
                 
             } else if(escolha.equalsIgnoreCase("c")){
-                alugarImovel.alugarImovel();
+                alugarImovel.MenuImovel();
             } else if (escolha.equalsIgnoreCase("X")) {
                 return;
             } else {
