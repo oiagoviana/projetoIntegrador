@@ -8,35 +8,6 @@ public class cadastrarImovel {
 
   public static void cadastrarImovel() {
 
-    class Propriedade {
-      String endereco;
-      double preco;
-      String tipo;
-      boolean paraAlugar;
-
-	  
-      public Propriedade(String endereco, double preco, String tipo, boolean paraAlugar) {
-        this.endereco = endereco;
-        this.preco = preco;
-        this.tipo = tipo;
-        this.paraAlugar = paraAlugar;
-      }
-
-      public void mostrarInformacoes() {
-    	System.out.println();
-        System.out.println("Endereço: " + endereco);
-        System.out.println("Preço: R$" + preco);
-        System.out.println("Tipo: " + tipo);
-        if (paraAlugar) {
-          System.out.println("Para alugar");
-          System.out.println("Quando o aluguel irá vencer");
-          String vencer = LerDados.lerTexto();
-        } else {
-          System.out.println("Para vender");
-        }
-      }
-    }
-
     System.out.println("Que tipo de propriedade você deseja?");
     System.out.println("1. Casa");
     System.out.println("2. Apartamento");
@@ -47,8 +18,15 @@ public class cadastrarImovel {
     double preco;
     String tipo;
     boolean paraAlugar;
+	String nome;
+	String email;
+	String telefone;
+
+		
+	
+}}
     
-    if (escolha.equals("1")) {
+    /*if (escolha.equals("1")) {
     	tipo = "Casa";
     	System.out.println("Endereço da casa: ");
     	endereco = LerDados.lerTexto2("Digite o endereço da casa!");
@@ -68,7 +46,7 @@ public class cadastrarImovel {
     	paraAlugar = paraAlugarStr.equalsIgnoreCase("s");
       
       
-    	Propriedade casa = new Propriedade(endereco, preco, tipo, paraAlugar);
+    	Propriedade casa = new Propriedade(endereco, preco, tipo, paraAlugar, nome, email, telefone);
     	System.out.println();
     	casa.mostrarInformacoes();
     	} else if (escolha.equals("2")) {
@@ -90,7 +68,7 @@ public class cadastrarImovel {
     	String paraAlugarStr = LerDados.lerTexto2("Digite a sua resposta!");
     	paraAlugar = paraAlugarStr.equalsIgnoreCase("sim");
       
-    	Propriedade apartamento = new Propriedade(endereco, preco, tipo, paraAlugar);
+    	Propriedade apartamento = new Propriedade(endereco, preco, tipo, paraAlugar, nome, email, telefone);
       	apartamento.mostrarInformacoes();
 
     } else if (escolha.equals("3")) {
@@ -103,7 +81,7 @@ public class cadastrarImovel {
       	preco = LerDados.lerDouble("Digite o preço do terreno!");
       	paraAlugar = false;
       
-      	Propriedade terreno = new Propriedade(endereco, preco, tipo, paraAlugar);
+      	Propriedade terreno = new Propriedade(endereco, preco, tipo, paraAlugar, nome, telefone, email);
       	terreno.mostrarInformacoes();
     } else{
     	System.out.println("Opção inválida");
@@ -113,7 +91,7 @@ public class cadastrarImovel {
     	System.out.println("\nInforme os seus dados para continuar.");
 
     	System.out.println("Nome: ");
-    	String nome = LerDados.lerTexto2("Digite o seu nome!");
+    	 nome = LerDados.lerTexto2("Digite o seu nome!");
     	nome = nome.replaceAll("[^a-zA-Z]", "");
     
     	System.out.println("CPF: ");
@@ -123,17 +101,13 @@ public class cadastrarImovel {
     	String cpf2 = cpf.replaceAll("(\\d{3})(\\d{3})(\\d{3})(\\d{2})", "$1.$2.$3-$4");
       
     	System.out.println("Telefone: ");
-    	String telefone = LerDados.lerTexto2("Digite o seu telefone!");
+       telefone = LerDados.lerTexto2("Digite o seu telefone!");
     	telefone = telefone.replaceAll("[^0-9]", "");
     	String telefone2 = telefone.replaceAll("(\\d{2})(\\d{5})(\\d{4})", "($1)$2-$3");
 
     	System.out.println("E-mail: ");
-    	String email = LerDados.lerTexto2("Digite o seu e-mail!");
+        email = LerDados.lerTexto2("Digite o seu e-mail!");
 
 		
     	System.out.println("Cadastro realizado!");
-    	}
-
-		
-  	}
- }
+      	}*/
