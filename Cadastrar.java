@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.stream.Collectors;
 public class Cadastrar {
     private static final String NOME_ARQUIVO = "cadastrarImoveis.txt";
 
-    public static List<Propriedade> lerTudo() {
+    /*public static List<Propriedade> lerTudo() {
         List<Propriedade> imoveis = new ArrayList<>();
         try {
             List<String> linhas = Files.readAllLines(Path.of(NOME_ARQUIVO));
@@ -18,7 +19,7 @@ public class Cadastrar {
                 if (partes.length == 6) { // Verificar se há informações suficientes
                     Propriedade propriedade = new Propriedade(
                             partes[0], // Endereço
-                            Double.parseDouble(partes[1]), // Preço
+                            BigDecimal.parse(partes[1]), // Preço
                             partes[2], // Tipo
                             partes[3].equals("true"),// para Alugar
                            partes [4],  // nome
@@ -53,7 +54,7 @@ public class Cadastrar {
         imoveis.removeIf(v -> v.endereco.equalsIgnoreCase(imovel.endereco));
         imoveis.add(imovel);
         salvarTudo(imoveis);
-    }
+    }*/
 
 
     
