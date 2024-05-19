@@ -1,4 +1,4 @@
-/*import java.util.Scanner;
+import java.util.Scanner;
 
 public class comprarAp {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class comprarAp {
     }
 
     public static void comprarAp() {
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         System.out.println("Por favor, responda algumas perguntas para encontrar a casa mais adequada para você.");
 
         String localizacao = getLocalizacao(scanner);
@@ -135,6 +135,6 @@ public class comprarAp {
             }
         } else  {
             System.out.println("Desculpe, infelizmente não encontramos nenhum apartamento que atenda às suas preferências no momento.");
-        }
+        }*/
     }
-}*/
+}
