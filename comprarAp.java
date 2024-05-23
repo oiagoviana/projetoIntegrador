@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class comprarAp {
     public static void main(String[] args) {
@@ -137,4 +137,4 @@ public class comprarAp {
             System.out.println("Desculpe, infelizmente não encontramos nenhum apartamento que atenda às suas preferências no momento.");
         }*/
     }
-}
+}*/
