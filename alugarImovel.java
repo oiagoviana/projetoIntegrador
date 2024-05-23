@@ -1,25 +1,33 @@
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.chrono.IsoChronology;
-import java.time.format.DateTimeFormatter;
-import java.time.format.ResolverStyle;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+    public class alugarImovel{
 
+        public static void MenuImovel(){
+            while (true) {
+                System.out.println("Escolha uma opção");
+                System.out.println("A - Listar casas");
+                System.out.println("B - Listar apartamentos");
+                System.out.println("X - VOLTAR");
+                System.out.println();
+                System.out.println("Digite a sua escolha:");
+                var escolha = LerDados.lerTexto().toUpperCase();
+            
+                if(escolha.equals("A")){
+                    System.out.println("teste");
+                }else if(escolha.equals("B")){
+                    System.out.println("teste");
+                }else if(escolha.equals("X")){
+                    return;
+                } else{
+                    System.out.println("Está não é uma opção válida vamos tentar novamente!");
+                }
+                System.out.println();
 
-	
-	
-	public record alugarImovel (
-	        int codigo,
-	        String nomePeca,
-	        String nomeComprador,
-	        int quantidade,
-	        LocalDateTime hora,
-	        BigDecimal preco
-	) {
+            }
+        }
 
-    public static void alugarImovel(){
-    	
+            private static void listarCasa(){
+                
+            }
+            
+
+        
     }
-}

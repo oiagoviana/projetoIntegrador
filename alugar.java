@@ -5,25 +5,27 @@ import java.util.Optional;
 
 public record alugar (
         String nome,
-        int estoque,
-        BigDecimal preco
+        String tipo,
+        Double preco,
+        Boolean paraAlugar
 ) {
     private static final int CAMPOS = alugar.class.getRecordComponents().length;
 
     public String precoString() {
-        return preco.toPlainString();
+        return String.valueOf(preco);
     }
 
     public List<String> desconstruir() {
-        return List.of(nome, "" + estoque, precoString());
+        return List.of(nome, "" + preco, precoString());
     }
 
     public static alugar construir(List<String> listinha) {
         if (listinha.size() != CAMPOS) throw new IllegalArgumentException();
         return new alugar(
                 listinha.get(0),
-                Integer.parseInt(listinha.get(1)),
-                new BigDecimal(listinha.get(2)).setScale(2)
+                listinha.get(1),
+                Double.parseDouble(listinha.get(2)),
+                listinha.get(3).equals("true")
         );
     }
 
