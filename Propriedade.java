@@ -8,15 +8,16 @@ import java.util.Optional;
 public record Propriedade (
         String endereco,
         BigDecimal preco,
-        Boolean tipo,
+        String tipoImovel,
+        boolean tipo,
         String nome,
         String email,
         String telefone
 ) {
-    private static final int CAMPOS = Propriedade.class.getRecordComponents().length;
+    private static final int CAMPOS = Propriedade.class.getRecordComponents().length + 1;
 
     public List<String> desconstruir() {
-        return List.of(endereco, preco.toString(), tipo.toString(), "" + nome);
+        return List.of(endereco, preco.toEngineeringString(), "" + tipoImovel, tipo ? "SIM" : "NÃO", "" + nome, "" + email, "" + telefone, "");
     }
 
     public static Propriedade construir(List<String> listinha) {
@@ -24,10 +25,11 @@ public record Propriedade (
         return new Propriedade(
                 listinha.get(0),
                 new BigDecimal(listinha.get(1)).setScale(2),
-                listinha.get(2).equals("true"),
-                listinha.get(3),
+                listinha.get(2),
+                listinha.get(3).equals("SIM"),
                 listinha.get(4),
-                listinha.get(5)
+                listinha.get(5),
+                listinha.get(6)
                
         );
     }
