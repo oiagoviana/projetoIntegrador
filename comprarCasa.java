@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ComprarCasa {
+public class comprarCasa {
     public static void main(String[] args) {
         comprarCasa();
     }

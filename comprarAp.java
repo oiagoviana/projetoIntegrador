@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class comprarAp {
     public static void main(String[] args) {
@@ -9,129 +9,21 @@ public class comprarAp {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Por favor, responda algumas perguntas para encontrar a casa mais adequada para você.");
 
-        System.out.println("Em que local você gostaria de morar? ");
-        System.out.println("1. Zona Central");
-        System.out.println("2. Zona Industrial");
-        System.out.println("3. Zona Periférica");
-        System.out.print("Escolha uma opção: ");
-        String localizacao = scanner.nextLine();
+        String localizacao = getLocalizacao(scanner);
+        int numQuartos = getNumQuartos(scanner);
 
-        System.out.println("Quantos quartos você precisa: ");
-        int numQuartos = scanner.nextInt();
-        scanner.nextLine();
-        
-        // Centro ap 1
-        if (localizacao.equalsIgnoreCase("1") && numQuartos == 1) {
-            System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
-            System.out.println("1. Um apartamento proximo ao metrô com 1 quarto, 1 banheiro, sem garagem, localizado em Rua Rua Brigadeiro Tobias, Cambuci - SP | R$ 200.000 (IPTU 12xR$ 41)");
-            System.out.println("2. Um apartamento proximo ao metrô com 1 quarto, 1 banheiro, 1 vaga para carro, localizado em Avenida Cásper Líbero, Bela Vista - SP | R$ 350.000 (IPTU 12xR$ 112)");
-            System.out.println("3. Um apartamento proximo ao metrô com 1 quarto, 2 banheiro, 1 vaga para carro, localizado em Rua Major Quedinho, Santa Cecilia - SP | R$ 545.000 (IPTU 12xR$ 193)");
-            System.out.println("4. Voltar");
-            System.out.print("Escolha uma opção: ");
-            int opcao = scanner.nextInt();
-            scanner.nextLine();
+        String[][][] ap = {
+            {//Centro
+                {"Rua Brigadeiro Tobias. Cambuci - SP | R$ 200.000(IPTU 12xR$ 41)", "Avanida Cásper Líbero, Bela Vista - SP | R$ 350.000 (IPTU 12xR$ 112)", "Rua Major Quedinho, Santa Cecilia - SP | R$ 545.000 (IPTU 12xR$ 193)"},
+                {"Praça Pedro Lessa, Bom Retiro - SP | R$ 485.000 (IPTU 12xR$ 148)", "Rua Álvaro de Carvalho, Bela Vista - SP | R$ 605.000 (IPTU 12xR$ 180)","Rua Washington Luis, Consolação - SP | R$ 395.000 (IPTU 12xR$ 0)"},
+                {"Rua Fernão Sales, Sé - SP | R$ 380.000 (IPTU 12xR$ 0)","Rua Martins Fontes, Bela Vista - SP | R$ 1.200.000 (IPTU 12xR$ 159)","Rua Durval Clemente, Liberdade - SP | R$ 700.000 (IPTU 12xR$ 0)"}
+            },
+            {//Industria
+                {}
 
-            switch (opcao) {
-                case 1:
-                case 2:
-                case 3:
-                    System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
-
-                    System.out.print("Informe seu nome completo:");
-                    String nome = scanner.nextLine();
-
-                    System.out.print("Infome seu telefone:");
-                    String tel = scanner.nextLine();
-
-                    System.out.print("Informe seu e-mail:");
-                    String email = scanner.nextLine();
-
-                    System.out.println("Obrigado! Entraremos em contato para agendar uma visita ao imóvel!");
-                    return;
-
-                case 4:
-                    comprarAp();
-                    break;
-
-                default:
-                    break;
             }
-            
-            // Centro ap 2
-        } else if (localizacao.equalsIgnoreCase("1") && numQuartos == 2) {
-            System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
-            System.out.println("1. Um apartamento próximo ao metrô, 2 quartos, 2 banheiros, sem vagas para carro, localizado em Praça Pedro Lessa, Bom Retiro - SP | R$ 485.000 (IPTU 12xR$ 148)");
-            System.out.println("2. Um apartamneto próximo ao metrô, 2 quartos, 2 banheiros, sem vagas para carro, localizado em Rua Washington Luis, Consolação - SP | R$ 395.000 (IPTU 12xR$ 0)");
-            System.out.println("3. Um apartamento próximo ao metrô, 2 quartos, 2 banheiros, 1 vaga para carro, localizado em Rua Álvaro de Carvalho, Bela Vista - SP | R$ 605.000 (IPTU 12xR$ 180)");
-            System.out.println("4. Voltar");
-            System.out.print("Escolha uma opção: ");
-            int opcao = scanner.nextInt();
-            scanner.nextLine();
+        }
 
-            switch (opcao) {
-                case 1:
-                case 2:
-                case 3:
-                    System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
-
-                    System.out.print("Informe seu nome completo:");
-                    String nome = scanner.nextLine();
-
-                    System.out.print("Infome seu telefone:");
-                    String tel = scanner.nextLine();
-
-                    System.out.print("Informe seu e-mail:");
-                    String email = scanner.nextLine();
-
-                    System.out.println("Obrigado! Entraremos em contato para agendar uma visita ao imóvel!");
-                    return;
-
-                case 4:
-                    comprarAp();
-                    break;
-
-                default:
-                    break;
-            }
-            
-           //centro ap 3
-        } else if (localizacao.equalsIgnoreCase("1") && numQuartos == 3) {
-            System.out.println("Ótimo! Trouxemos algumas opções para você no centro da cidade.");
-            System.out.println("1. Um apartamento proximo ao metrô, 3 quartos, 1 banheiros, sem vagas para carro, localizada em Rua Fernão Sales, Sé - SP | R$ 380.000 (IPTU 12xR$ 0)");
-            System.out.println("2. Um apartamento proximo ao metrô, 3 quartos, 1 banheiros, 1 vagas para carro, localizada em Rua Martins Fontes, Bela Vista - SP | R$ 1.200.000 (IPTU 12xR$ 159)");
-            System.out.println("3. Um apartamento proximo ao metrô, 3 quartos, 3 banheiros, 2 vagas para carro, localizada em Rua Durval Clemente, Liberdade - SP | R$ 700.000 (IPTU 12xR$ 0) ");
-            System.out.println("4. Voltar");
-            System.out.print("Escolha uma opção: ");
-            int opcao = scanner.nextInt();
-            scanner.nextLine();
-
-            switch (opcao) {
-                case 1:
-                case 2:
-                case 3:
-                    System.out.println("Ótimo! Por favor conclua seu cadastro para darmos processedência a compra!");
-
-                    System.out.print("Informe seu nome completo:");
-                    String nome = scanner.nextLine();
-
-                    System.out.print("Infome seu telefone:");
-                    String tel = scanner.nextLine();
-
-                    System.out.print("Informe seu e-mail:");
-                    String email = scanner.nextLine();
-
-                    System.out.println("Obrigado! Entraremos em contato para agendar uma visita ao imóvel!");
-                    return;
-
-                    case 4:
-                    comprarAp();
-                    break;
-
-                default:
-                    break;
-            }
-
-            //industrial ap 1
         } else if (localizacao.equalsIgnoreCase("2") && numQuartos == 1) {
             System.out.println("Ótimo! Trouxemos algumas opções para você na zona industrial da cidade.");
             System.out.println("1. Um apartamento com 1 quarto, 1 banheiros, sem vaga para carros, localizada em Avenida Imperatriz Leopoldina, Vila Leopoldina - SP | R$ 240.000 (IPTU 12xR$ 0)");
@@ -245,4 +137,4 @@ public class comprarAp {
             System.out.println("Desculpe, infelizmente não encontramos nenhum apartamento que atenda às suas preferências no momento.");
         }
     }
-}
+}*/
