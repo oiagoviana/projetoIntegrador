@@ -1,40 +1,8 @@
-Rua Orion 
-4300305.00
-true
-NÃO
-Iago
-iago@gmail.com
-11 987654321
-
-Rua Vagaundo
-543534534.00
-false
-NÃO
-Iago bonzão
-iago2@gmail.com
-11 998877665
-
-Rua Orion 2
-3423532.00
-true
-NÃO
-iago viana doido
-outro@hotmail.com
-5436435
-
-Rua teste
-666.00
-vender
-SIM
-Z�
-ze@ze.com
-19998887766
-
 Rua Orion
-30000.00
+202020.00
+casa
 Vender
-SIM
-Iago Viana
-iago.tangara
-1198646968
+iago viana
+iagoviana@gmail.com
+11986549698
 

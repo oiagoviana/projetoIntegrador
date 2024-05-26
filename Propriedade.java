@@ -17,7 +17,7 @@ public record Propriedade (
     private static final int CAMPOS = Propriedade.class.getRecordComponents().length + 1;
 
     public List<String> desconstruir() {
-        return List.of(endereco, preco.toEngineeringString(), "" + tipoImovel, tipo ? "SIM" : "NÃO", "" + nome, "" + email, "" + telefone, "");
+        return List.of(endereco, preco.toEngineeringString(), "" + tipoImovel, tipo ? "Vender" : "Alugar", "" + nome, "" + email, "" + telefone, "");
     }
 
     public static Propriedade construir(List<String> listinha) {

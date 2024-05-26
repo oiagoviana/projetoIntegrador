@@ -135,6 +135,6 @@ public class comprarAp {
             }
         } else  {
             System.out.println("Desculpe, infelizmente não encontramos nenhum apartamento que atenda às suas preferências no momento.");
-        }*/
+        }
     }
 }*/
