@@ -110,7 +110,7 @@ public class cadastrarImovel {
 		}
 	}
 	
-	private static void mostrarPropriedades(Propriedade p) {
+	public static void mostrarPropriedades(Propriedade p) {
 		System.out.println("Endereço: "       + p.endereco()   );
 		System.out.println("Preço: "          + p.preco()      );
 		System.out.println("Tipo do Imóvel: " + p.tipoImovel() );

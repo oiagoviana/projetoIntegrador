@@ -1,11 +1,35 @@
-import java.util.Scanner;
 
 public class comprarCasa {
-    public static void main(String[] args) {
-        comprarCasa();
+
+    public static void MenuComprarCasa(){
+        while (true) {
+            System.out.println("");
+            System.out.println("Informe a opção desejada.");
+            System.out.println("A - Listar Casas");
+            System.out.println("B - Comprar casa");
+            var escolha = LerDados.lerTexto().toUpperCase();
+
+            if(escolha.equals("A")){
+                listarCasas();
+            }
+        }
     }
 
-    public static void comprarCasa() {
+
+
+    public static void listarCasas(){
+        var propriedades = ArquivoCadastrar.lerTudo();
+		for(var p: propriedades) {
+            if(p.tipoImovel().equalsIgnoreCase("casa")){
+			System.out.println();
+			cadastrarImovel.mostrarPropriedades(p);
+            }
+			
+		}
+    }
+    
+
+    /*public static void comprarCasa() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Por favor, responda algumas perguntas para encontrar a casa mais adequada para você.");
 
@@ -103,5 +127,8 @@ public class comprarCasa {
     private static boolean validarTelefone(String telefone) {
         // Verifica se o telefone contém apenas números
         return telefone.matches("[0-9]+");
-    }
+    }*/
+
+
+
 }

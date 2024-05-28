@@ -29,7 +29,7 @@ public class Imobiliaria {
                 if(subEscolha.equalsIgnoreCase("1")){
                     //comprarAp.comprarAp();
                 } else if(subEscolha.equalsIgnoreCase("2")){
-                    comprarCasa.comprarCasa();
+                    comprarCasa.MenuComprarCasa();
                 } else if(subEscolha.equalsIgnoreCase("3")){
                     comprarTerreno.comprarTerreno();
                 }
