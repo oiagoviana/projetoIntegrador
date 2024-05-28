@@ -22,17 +22,7 @@ public class Imobiliaria {
                 cadastrarImovel.MenuImovel();
                 
             } else if (escolha.equalsIgnoreCase("b")) {
-            	System.out.println("1 - Comprar Apartamento");
-             	System.out.println("2 - Comprar Casa");
-             	System.out.println("3 - Comprar Terreno");
-            	var subEscolha = LerDados.lerTexto();
-                if(subEscolha.equalsIgnoreCase("1")){
-                    //comprarAp.comprarAp();
-                } else if(subEscolha.equalsIgnoreCase("2")){
-                    comprarCasa.MenuComprarCasa();
-                } else if(subEscolha.equalsIgnoreCase("3")){
-                    comprarTerreno.comprarTerreno();
-                }
+            	comprarImovel.MenuComprarCasa();
                 
             } else if(escolha.equalsIgnoreCase("c")){
                 //alugarImovel.MenuImovel();

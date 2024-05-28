@@ -65,9 +65,13 @@ public class cadastrarImovel {
 		
 		System.out.println("Informe seu telefone:");
 		var telefone = LerDados.lerTexto2("INFORME SEU TELEFONE!");
+
+		boolean situacaoImovel = false;
 		
+
+		/*complemento, garagem, comodos, localProximo(estação, shopping, metro) */
 		
-		var imovel = new Propriedade(endereco, preco, tipoImovel, tipo, nome, email, telefone);
+		var imovel = new Propriedade(endereco, preco, tipoImovel, tipo, nome, email, telefone, situacaoImovel);
 		ArquivoCadastrar.salvar(imovel);
 		System.out.println("Imóvel cadastrado.");		
 	}
@@ -110,13 +114,12 @@ public class cadastrarImovel {
 		}
 	}
 	
-	public static void mostrarPropriedades(Propriedade p) {
+	private static void mostrarPropriedades(Propriedade p) {
 		System.out.println("Endereço: "       + p.endereco()   );
 		System.out.println("Preço: "          + p.preco()      );
 		System.out.println("Tipo do Imóvel: " + p.tipoImovel() );
 		System.out.println("Tipo: "           + p.tipo()       );
 		System.out.println("Nome: "           + p.nome()       );
-		System.out.println("Email: "          + p.email()      );
 		System.out.println("Telefone: "       + p.telefone()   );
 	}
 	

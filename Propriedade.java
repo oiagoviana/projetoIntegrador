@@ -12,12 +12,13 @@ public record Propriedade (
         boolean tipo,
         String nome,
         String email,
-        String telefone
+        String telefone,
+        boolean situacaoImovel
 ) {
     private static final int CAMPOS = Propriedade.class.getRecordComponents().length + 1;
 
     public List<String> desconstruir() {
-        return List.of(endereco, preco.toEngineeringString(), "" + tipoImovel, tipo ? "Vender" : "Alugar", "" + nome, "" + email, "" + telefone, "");
+        return List.of(endereco, preco.toEngineeringString(), "" + tipoImovel, tipo ? "Vender" : "Alugar", "" + nome, "" + email, "" + telefone, situacaoImovel ? "Vendida" : "A venda", "");
     }
 
     public static Propriedade construir(List<String> listinha) {
@@ -29,7 +30,8 @@ public record Propriedade (
                 listinha.get(3).equals("SIM"),
                 listinha.get(4),
                 listinha.get(5),
-                listinha.get(6)
+                listinha.get(6),
+                listinha.get(7).equals("SIM")
                
         );
     }
