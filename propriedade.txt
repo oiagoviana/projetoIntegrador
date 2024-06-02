@@ -1,9 +1,18 @@
 Rua Orion
 2000000.00
 Casa
-Vender
+Alugar
 Iago Viana
 iago.tangara
 11986549698
+A venda
+
+Rua Rani
+20000.00
+Casa
+Vender
+Rani
+wedhiqh
+5554444444
 A venda
 
