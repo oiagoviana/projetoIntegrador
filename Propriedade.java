@@ -6,7 +6,8 @@ import java.util.Optional;
 
 
 public record Propriedade (
-        String endereco,
+        int Id,
+		String endereco,       
         BigDecimal preco,
         String tipoImovel,
         boolean tipo,
@@ -16,22 +17,23 @@ public record Propriedade (
         boolean situacaoImovel
 ) {
     private static final int CAMPOS = Propriedade.class.getRecordComponents().length + 1;
-
+    
     public List<String> desconstruir() {
-        return List.of(endereco, preco.toEngineeringString(), "" + tipoImovel, tipo ? "Vender" : "Alugar", "" + nome, "" + email, "" + telefone, situacaoImovel ? "Vendida" : "A venda", "");
+        return List.of("" + Id, endereco, preco.toEngineeringString(), tipoImovel, tipo ? "Vender" : "Alugar", nome, email, telefone, situacaoImovel ? "Vendida" : "A venda", "");
     }
-
+    
     public static Propriedade construir(List<String> listinha) {
         if (listinha.size() != CAMPOS) throw new IllegalArgumentException();
         return new Propriedade(
-                listinha.get(0),
-                new BigDecimal(listinha.get(1)).setScale(2),
-                listinha.get(2),
-                listinha.get(3).equals("SIM"),
-                listinha.get(4),
+        		Integer.parseInt(listinha.get(0)),
+        		listinha.get(1),
+                new BigDecimal(listinha.get(2)).setScale(2),
+                listinha.get(3),
+                listinha.get(4).equals("SIM"),
                 listinha.get(5),
                 listinha.get(6),
-                listinha.get(7).equals("SIM")
+                listinha.get(7),
+                listinha.get(8).equals("SIM")
                
         );
     }
@@ -55,93 +57,8 @@ public record Propriedade (
         return listona;
     }
 
-    public static Optional<Propriedade> buscar(List<Propriedade> tudo, String endereco) {
-        return tudo.stream().filter(p -> p.endereco().equalsIgnoreCase(endereco)).findAny();
+    public static Optional<Propriedade> buscar(List<Propriedade> tudo, int Id) {
+        return tudo.stream().filter(p -> p.Id() == Id).findAny();
     }
-
-    /*
-
-    // Método de buscar veículos, 4 implementações diferentes.
-    // Todas as implementações fazem a mesma coisa.
-    // Use apenas uma implementação no seu código.
-
-    // Implementação 1.
-    // Usando um for com um contador procurando o veículo desejado.
-    public static Veiculo buscar1(List<Veiculo> tudo, String placaProcurada) {
-        for (var i = 0; i < tudo.size(); i++) {
-            var v = tudo.get(i);
-            if (v.placa().equals(placaProcurada)) return v;
-        }
-        return null;
-    }
-
-    // Implementação 2.
-    // O mesmo que a implementação 1, mas usando o enhanced-for do Java 5+ ao invés do for tradicional.
-    public static Veiculo buscar2(List<Veiculo> tudo, String placaProcurada) {
-        for (var v : tudo) {
-            if (v.placa().equals(placaProcurada)) return v;
-        }
-        return null;
-    }
-
-    // Implementação 3.
-    // Para evitar de retornar null, usamos a classe Optional do Java 8+.
-    public static Optional<Veiculo> buscar3(List<Veiculo> tudo, String placaProcurada) {
-        for (var v : tudo) {
-            if (v.placa().equals(placaProcurada)) return Optional.of(v);
-        }
-        return Optional.empty();
-    }
-
-    // Implementação 4.
-    // Usando os streams e o lambda do Java 8+, dá para fazer tudo numa linha só.
-    public static Optional<Veiculo> buscar4(List<Veiculo> tudo, String placaProcurada) {
-        return tudo.stream().filter(v -> v.placa().equals(placaProcurada)).findAny();
-    }
-
-    // */
 }
 
-
-
-
-
-
-
-
-
-
-/*public class Propriedade {
-        String endereco;
-        double preco;
-        String tipo;
-        boolean paraAlugar;
-        String nome;
-        String email;
-        String telefone;
-  
-        
-        public  Propriedade(String endereco, double preco, String tipo, boolean paraAlugar, String nome, String email, String telefone) {
-          this.endereco = endereco;
-          this.preco = preco;
-          this.tipo = tipo;
-          this.paraAlugar = paraAlugar;
-          this.nome = nome;
-          this.email =  email;
-          this.telefone = telefone;
-        }
-  
-        public void mostrarInformacoes() {
-          System.out.println();
-          System.out.println("Endereço: " + endereco);
-          System.out.println("Preço: R$" + preco);
-          System.out.println("Tipo: " + tipo);
-          if (paraAlugar) {
-            System.out.println("Para alugar");
-            System.out.println("Quando o aluguel irá vencer");
-            String vencer = LerDados.lerTexto();
-          } else {
-            System.out.println("Para vender");
-          }
-        }
-}*/

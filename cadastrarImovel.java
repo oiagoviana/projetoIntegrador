@@ -29,27 +29,50 @@ public class cadastrarImovel {
 	        }
 	    }
 		
+		
+	public class GeradorDeID {
+		private static int ultimoID;
+
+		public static int gerarNovoID() {
+			return ++ultimoID;
+		}
+	}
 
 
 	public static void cadastroImovel() {
+		
+		
 		var tipo = true;
 
 		System.out.println("Passe as informações de seu imóvel.");
 		System.out.println();
 		
+		
+		var Id = GeradorDeID.gerarNovoID();
+		
 		System.out.println("Digite o endereço do imóvel:");
 		var endereco = LerDados.lerTexto2("Informe um endereço!");
 		
+		/*System.out.println("Digite o complemento do imóvel:");
+		var complemento = LerDados.lerInt("Informe o complemento do imóvel: ");
+		
+		System.out.println("Informe se há garagem no imóvel(sim/nao)");
+		var garagem = LerDados.lerSimNao("Informe se há garagem!");
+		
+		System.out.println("Informe quantos comôdos há no imóvel");
+		var comodos = LerDados.lerTexto2("Informe a quantidade de comodos");*/
+		
+		
+		
 		System.out.println("Digite o preço do imóvel");
 		var preco = LerDados.lerBigDecimal(2, "Informe um preço!");
+		
 
 		System.out.println("Informe o tipo do imóvel (Casa/Apartamento/Terreno)");
 		var tipoImovel = LerDados.lerTexto2("Informe o tipo do imóvel!!!");
 		
-		 
-		
 		if(tipoImovel.equalsIgnoreCase("Casa") || tipoImovel.equalsIgnoreCase("Apartamento")) {
-		System.out.println("Informe se o imóvel é para vender (sim/nao)");
+		System.out.println("Informe se o imóvel é para vender(sim/nao)");
 		tipo = LerDados.lerSimNao("Informe o tipo do imóvel!");
 		}
 		
@@ -68,11 +91,11 @@ public class cadastrarImovel {
 
 		boolean situacaoImovel = false;
 		
-
-		/*complemento, garagem, comodos, localProximo(estação, shopping, metro) */
 		
-		var imovel = new Propriedade(endereco, preco, tipoImovel, tipo, nome, email, telefone, situacaoImovel);
+		var imovel = new Propriedade(Id, endereco, preco, tipoImovel, tipo, nome, email, telefone, situacaoImovel);
 		ArquivoCadastrar.salvar(imovel);
+		
+		System.out.println();
 		System.out.println("Imóvel cadastrado.");		
 	}
 	
@@ -89,11 +112,11 @@ public class cadastrarImovel {
 	
 	private static void buscarPropriedade() {
 		System.out.println("");
-		System.out.println("Digite o endereço: ");
-		var endereco = LerDados.lerTexto().toUpperCase();
+		System.out.println("Digite o Id do imóvel: ");
+		var Id = LerDados.lerInt("Tente novamente");
 		
 		var propriedades = ArquivoCadastrar.lerTudo();
-		var encontrou = Propriedade.buscar(propriedades, endereco);
+		var encontrou = Propriedade.buscar(propriedades, Id);
 		if (encontrou.isEmpty()) {
 			System.out.println("Não encontrei está propriedade.");
 		}else {
@@ -103,10 +126,10 @@ public class cadastrarImovel {
 	
 	private static void excluirPropriedade() {
 		System.out.println("");
-		System.out.println("Digite o endereço: ");
-		var endereco = LerDados.lerTexto().toUpperCase();
+		System.out.println("Digite o Id do imóvel: ");
+		var Id = LerDados.lerInt("Tente novamente");
 		
-		var excluir = ArquivoCadastrar.deletar(endereco);
+		var excluir = ArquivoCadastrar.deletar(Id);
 		if(excluir) {
 			System.out.println("Deletado.");
 		} else {
@@ -115,11 +138,12 @@ public class cadastrarImovel {
 	}
 	
 	private static void mostrarPropriedades(Propriedade p) {
+		System.out.println("Id: "             + p.Id()         );
 		System.out.println("Endereço: "       + p.endereco()   );
 		System.out.println("Preço: "          + p.preco()      );
 		System.out.println("Tipo do Imóvel: " + p.tipoImovel() );
-		System.out.println("Tipo: "           + p.tipo()       );
-		System.out.println("Nome: "           + p.nome()       );
+		System.out.println("Tipo(Vender ou alugar): "           + p.tipo()       );
+		System.out.println("Id: "             + p.nome()       );
 		System.out.println("Telefone: "       + p.telefone()   );
 	}
 	

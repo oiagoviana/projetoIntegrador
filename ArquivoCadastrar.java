@@ -13,17 +13,17 @@ public class ArquivoCadastrar {
         arquivo.escreverLinhas(listona, ARQUIVO);
     }
 
-    public static boolean deletar(String endereco) {
+    public static boolean deletar(int Id) {
         var tudo = lerTudo();
-        var deletou = tudo.removeIf(p -> p.endereco().equalsIgnoreCase(endereco));
+        var deletou = tudo.removeIf(p -> p.Id() == Id);
         salvarTudo(tudo);
         return deletou;
     }
 
-    public static void salvar(Propriedade endereco) {
+    public static void salvar(Propriedade Id) {
         var tudo = lerTudo();
-        tudo.removeIf(p -> p.endereco().equalsIgnoreCase(endereco.endereco()));
-        tudo.add(endereco);
+        tudo.removeIf(p -> p.Id() == (Id.Id()));
+        tudo.add(Id);
         salvarTudo(tudo);
     }
 }	
