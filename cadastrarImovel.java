@@ -29,7 +29,7 @@ public class cadastrarImovel {
 	    }
 
 	public static void cadastroImovel() {
-		var tipo = true;
+		//var tipo = true;
 
 		System.out.println("Passe as informações de seu imóvel.");
 		System.out.println();
@@ -41,7 +41,7 @@ public class cadastrarImovel {
 		var endereco = LerDados.lerTexto2("Informe um endereço!");
 		
 		/*System.out.println("Digite o complemento do imóvel:");
-		var complemento = LerDados.lerInt("Informe o complemento do imóvel: ");
+		var complemento = LerDados.lerTexto2("Informe o complemento do imóvel: ");
 		
 		System.out.println("Informe se há garagem no imóvel(sim/nao)");
 		var garagem = LerDados.lerSimNao("Informe se há garagem!");
@@ -55,10 +55,10 @@ public class cadastrarImovel {
 		System.out.println("Informe o tipo do imóvel (Casa/Apartamento/Terreno)");
 		var tipoImovel = LerDados.lerTexto2("Informe o tipo do imóvel!!!");
 		
-		if(tipoImovel.equalsIgnoreCase("Casa") || tipoImovel.equalsIgnoreCase("Apartamento")) {
-		System.out.println("Informe se o imóvel é para vender(sim/nao)");
-		tipo = LerDados.lerSimNao("Informe o tipo do imóvel!");
-		}
+		
+		System.out.println("Informe se o imóvel é para vender(sim/nao) se o tipo do imóvel for Terreno digite (sim)");
+		var tipo = LerDados.lerSimNao("Informe o tipo do imóvel!");
+		
 		
 		System.out.println();
 		System.out.println("Passe suas informações pessoais.");
