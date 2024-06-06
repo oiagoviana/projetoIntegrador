@@ -1,5 +1,4 @@
 public class cadastrarImovel {
-	
 		public static void MenuImovel() {
 			while (true) {
 	            System.out.println("Escolha uma opção:");
@@ -28,27 +27,15 @@ public class cadastrarImovel {
 	            System.out.println();
 	        }
 	    }
-		
-		
-	public class GeradorDeID {
-		private static int ultimoID;
-
-		public static int gerarNovoID() {
-			return ++ultimoID;
-		}
-	}
-
 
 	public static void cadastroImovel() {
-		
-		
 		var tipo = true;
 
 		System.out.println("Passe as informações de seu imóvel.");
 		System.out.println();
 		
-		
-		var Id = GeradorDeID.gerarNovoID();
+		System.out.println("Digite o registro da casa:");
+		var Id = LerDados.lerInt("Informe o registro!");
 		
 		System.out.println("Digite o endereço do imóvel:");
 		var endereco = LerDados.lerTexto2("Informe um endereço!");
@@ -62,12 +49,9 @@ public class cadastrarImovel {
 		System.out.println("Informe quantos comôdos há no imóvel");
 		var comodos = LerDados.lerTexto2("Informe a quantidade de comodos");*/
 		
-		
-		
 		System.out.println("Digite o preço do imóvel");
 		var preco = LerDados.lerBigDecimal(2, "Informe um preço!");
 		
-
 		System.out.println("Informe o tipo do imóvel (Casa/Apartamento/Terreno)");
 		var tipoImovel = LerDados.lerTexto2("Informe o tipo do imóvel!!!");
 		
@@ -91,7 +75,6 @@ public class cadastrarImovel {
 
 		boolean situacaoImovel = false;
 		
-		
 		var imovel = new Propriedade(Id, endereco, preco, tipoImovel, tipo, nome, email, telefone, situacaoImovel);
 		ArquivoCadastrar.salvar(imovel);
 		
@@ -105,14 +88,12 @@ public class cadastrarImovel {
 		for(var p: propriedades) {
 			System.out.println();
 			mostrarPropriedades(p);
-			
 		}
-		
 	}
 	
 	private static void buscarPropriedade() {
 		System.out.println("");
-		System.out.println("Digite o Id do imóvel: ");
+		System.out.println("Digite o registro do imóvel: ");
 		var Id = LerDados.lerInt("Tente novamente");
 		
 		var propriedades = ArquivoCadastrar.lerTudo();
@@ -126,7 +107,7 @@ public class cadastrarImovel {
 	
 	private static void excluirPropriedade() {
 		System.out.println("");
-		System.out.println("Digite o Id do imóvel: ");
+		System.out.println("Digite o registro do imóvel: ");
 		var Id = LerDados.lerInt("Tente novamente");
 		
 		var excluir = ArquivoCadastrar.deletar(Id);
@@ -138,14 +119,12 @@ public class cadastrarImovel {
 	}
 	
 	private static void mostrarPropriedades(Propriedade p) {
-		System.out.println("Id: "             + p.Id()         );
-		System.out.println("Endereço: "       + p.endereco()   );
-		System.out.println("Preço: "          + p.preco()      );
-		System.out.println("Tipo do Imóvel: " + p.tipoImovel() );
-		System.out.println("Tipo(Vender ou alugar): "           + p.tipo()       );
-		System.out.println("Id: "             + p.nome()       );
-		System.out.println("Telefone: "       + p.telefone()   );
+		System.out.println("Registro: "               + p.Id()         );
+		System.out.println("Endereço: "               + p.endereco()   );
+		System.out.println("Preço: "                  + p.preco()      );
+		System.out.println("Tipo do Imóvel: "         + p.tipoImovel() );
+		System.out.println("Tipo(Vender ou alugar): " + p.tipo()       );
+		System.out.println("Nome: "                   + p.nome()       );
+		System.out.println("Telefone: "               + p.telefone()   );
 	}
-	
-	
 }

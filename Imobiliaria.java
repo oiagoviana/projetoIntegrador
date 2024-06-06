@@ -25,7 +25,7 @@ public class Imobiliaria {
             	comprarImovel.MenuComprarCasa();
                 
             } else if(escolha.equalsIgnoreCase("c")){
-                //alugarImovel.MenuImovel();
+                alugarImovel.MenuAlugarCasa();
             } else if (escolha.equalsIgnoreCase("X")) {
                 return;
             } else {

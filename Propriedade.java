@@ -29,11 +29,11 @@ public record Propriedade (
         		listinha.get(1),
                 new BigDecimal(listinha.get(2)).setScale(2),
                 listinha.get(3),
-                listinha.get(4).equals("SIM"),
+                listinha.get(4).equals("sim"),
                 listinha.get(5),
                 listinha.get(6),
                 listinha.get(7),
-                listinha.get(8).equals("SIM")
+                listinha.get(8).equals("sim")
                
         );
     }

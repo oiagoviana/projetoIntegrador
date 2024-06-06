@@ -1,7 +1,3 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-
 public class comprarImovel {
 
     public static void MenuComprarCasa(){
@@ -28,22 +24,20 @@ public class comprarImovel {
         }
     }
     
-
     private static void listarCasaCompra(){
         var propriedades = ArquivoCadastrar.lerTudo();
 		for(var p: propriedades) {
-            if(p.tipoImovel().equalsIgnoreCase("casa") && !p.situacaoImovel() ){
+            if(p.tipoImovel().equalsIgnoreCase("casa") && p.situacaoImovel() ){
 			System.out.println();
 			mostrarPropriedades(p);
-            }
-			
+            }		
 		}
     }
     
     private static void listarApartamentoCompra() {
     	var propriedades = ArquivoCadastrar.lerTudo();
     	for(var p: propriedades) {
-    		if(p.tipoImovel().equalsIgnoreCase("apartamento") && !p.situacaoImovel()) {
+    		if(p.tipoImovel().equalsIgnoreCase("apartamento") && p.situacaoImovel()) {
     			System.out.println();
     			mostrarPropriedades(p);
     		}
@@ -53,7 +47,7 @@ public class comprarImovel {
     private static void listarTerrenoCompra() {
     	var propriedades = ArquivoCadastrar.lerTudo();
     	for(var p: propriedades) {
-    		if(p.tipoImovel().equalsIgnoreCase("terreno") && !p.situacaoImovel()) {
+    		if(p.tipoImovel().equalsIgnoreCase("terreno") && p.situacaoImovel()) {
     			System.out.println();
     			mostrarPropriedades(p);
     		}
@@ -61,17 +55,17 @@ public class comprarImovel {
     }
 
     private static void mostrarPropriedades(Propriedade p) {
-		System.out.println("Endereço: "       + p.endereco()   );
-		System.out.println("Preço: "          + p.preco()      );
-		System.out.println("Tipo do Imóvel: " + p.tipoImovel() );
-		System.out.println("Tipo: "           + p.tipo()       );
-		System.out.println("Nome: "           + p.nome()       );
-		System.out.println("Telefone: "       + p.telefone()   );
-        System.out.println("Situação Venda: " + p.situacaoImovel());
+    	System.out.println("Registro: "               + p.Id()         );
+		System.out.println("Endereço: "               + p.endereco()   );
+		System.out.println("Preço: "                  + p.preco()      );
+		System.out.println("Tipo do Imóvel: "         + p.tipoImovel() );
+		System.out.println("Tipo(Vender ou alugar): " + p.tipo()       );
+		System.out.println("Nome: "                   + p.nome()       );
+		System.out.println("Telefone: "               + p.telefone()   );
 	}
     
     private static void agendarVisita() {
-        System.out.println("Digite o endereço do imóvel a ser agendado:");
+        System.out.println("Digite o registro do imóvel a ser agendado:");
         var Id = LerDados.lerInt("Tente novamente");
         var propriedades = ArquivoCadastrar.lerTudo();
         var propriedade = Propriedade.buscar(propriedades, Id);
@@ -79,19 +73,16 @@ public class comprarImovel {
             System.out.println("Imóvel não encontrado.");
             return;
         }
+              	
+        	System.out.println("Digite a data de agendamento (DD/MM/AAAA HH:MM:SS):");
+        	var data = LerDados.lerDataHora("Informe a data corretamente (DD/MM/AAAA HH:MM:SS)");
+        	  
 
-        System.out.println("Digite a data de agendamento (DD/MM/AAAA HH:MM:SS):");
-        var data = LerDados.lerDataHora("Informe a data corretamente (DD/MM/AAAA HH:MM:SS)");
-        
-
-        try {
-            System.out.println("Visita agendada para: " + data);
-        } catch (Exception e) {
-            System.out.println("Data ou horário inválido. Tente novamente.");
-        }
+		        try {
+		            System.out.println("Visita agendada para: " + data);
+		            
+		        } catch (Exception e) {
+		            System.out.println("Data ou horário inválido. Tente novamente.");
+		        }
     }
-        
-
 }
-
-
