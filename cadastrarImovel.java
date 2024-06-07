@@ -37,10 +37,10 @@ public class cadastrarImovel {
 			var imovel = ArquivoCadastrar.lerTudo();
 			var jaExiste = Propriedade.buscar(imovel, registro);
 			if (jaExiste.isPresent()) {
-				System.out.println("Este veículo já está cadastrado.");
+				System.out.println("Este imóvel já está cadastrado.");
 				mostrarPropriedades(jaExiste.get());
 				System.out.print("Deseja substituí-lo? ");
-				var vaiTrocar = LerDados.lerSimNao("Escolha sim ou não. Deseja subsituir esse veículo? ");
+				var vaiTrocar = LerDados.lerSimNao("Escolha sim ou não. Deseja subsituir esse imóvel? ");
 				if (!vaiTrocar) return;
 			}
 			cadastroImovel(registro);
